@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Sejarah Universitas Ma Chung</title>
+        <style>
+            .warna:link, .warna:visited {background-color:black;color: white;padding: 5px 15px;text-align: center;text-decoration: none;display: inline-block;}
+            .warna:hover, .warna:active {background-color:teal;}
+            .center {display: block;margin-left: auto;margin-right: auto;width: 25%;}
+        </style>
+        <link rel="style" href="">
+    </head>
+    <!--Mini 1-->
+    <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <h2 style="text-align: center;">Sejarah Universitas Ma Chung</h2>
+        <h4 style="text-align: center;">Diawali dengan Kesederhanaan, Mengukir Masa Depan Gemilang</h4>
+        <hr/>
+        <p>Ma Chung merupakan sebuah sekolah bersejarah di kota Malang - Jawa Timur, yang telah meluluskan alumni-alumni terbaiknya sejak era tahun 1950an. Sekolah ini telah mewariskan standar pendidikan dan pembangunan nilai-nilai moral yang konsisten terhadap lulusannya. Bekas gedung sekolah Ma Chung masih dapat disaksikan oleh generasi masa kini meski saat ini digunakan oleh institusi lain, namun satu hal yang tidak akan lekang oleh jaman: <b>Spirit Alumni Ma Chung.</b></p>
+        <p>Tersebar di hampir seluruh penjuru dunia, para alumni ini telah menorehkan sejarah, baik sebagai ilmuwan di universitas-universitas ternama di dunia maupun sebagai wirausahawan Indonesia yang sukses dan bahkan berkiprah di dunia bisnis internasional.</p>
+        <p>Ide pendirian Universitas Ma Chung dicetuskan pada saat pelaksanaan Reuni Akbar peringatan hari ulang tahun ke-55 sekolah Ma Chung pada September 2001 di kota Xiamen, China, yang dilandasi oleh warisan semangat Ma Chung yang berintikan: rukun, bersatu, mengabdi kepada masyarakat, serta mewujudkan dedikasi kepada dunia pendidikan Indonesia.</p>
+        <p>Dengan dipegang teguhnya semboyan "Waktu minum air jangan lupa sumbernya, waktu sukses balaslah budi kepada kampung halamannya", serta komitmen alumni Ma Chung di seluruh dunia, maka pada 1 Mei 2004 didirikanlah PT. Ma Chung sebagai langkah awal berdirinya Universitas Ma Chung, dipelopori oleh Soegeng Hendarto, Mochtar Riady, Teguh Kinarto, Hendro Sunjoto, Koentjoro Loekito, Effendy Sudargo, Agus Chandra, Hadi Widjojo, Nuryati Tanuwidjaya, Nehemja, Alex Lesmana Samudra, Evelyn Adam, Hadi Surjono, Nagawidjaja Winoto, dan Soebroto Wirotomo - nama-nama yang sudah terkenal sebagai pebisnis berskala internasional.</p>
+        <p>Secara aklamasi dan dengan pernyataan kebulatan tekad alumni dari seluruh dunia, dalam Reuni Akbar peringatan Ulang Tahun ke-60 SMA Ma Chung di Malang, 17 Juli 2005 diletakkan batu pertama pembangunan Universitas Ma Chung. Dalam rangka memperlancar jalannya pengelolaan universitas dalam jangka panjang maka dibentuklah Yayasan Harapan Bangsa Sejahtera yang menaungi Universitas Ma Chung.</p>
+        <p>Alumni senior yaitu Prof. Dr. Yang Zhiling dan Prof. Dr. Bin Ling memberikan banyak usulan sehubungan dengan pembangunan dan pengelolaan universitas. Usulan beliau tersebut kemudian dijadikan pijakan pertama bagi perencanaan (blue print) oleh para pimpinan PT. Ma Chung dan Yayasan Harapan Bangsa Sejahtera.</p>
+        <p>Dihadiri oleh ribuan alumni, pada tanggal 7 Juli 2007, Universitas Ma Chung diresmikan operasionalnya, dan sejak saat itu, Universitas Ma Chung telah mendidik ribuan putra-putri terbaik bangsa untuk menjadi pemimpin masa depan. Tepat empat tahun setelahnya pada 7 Juli 2011, Universitas Ma Chung meluluskan wisudawan-wisudawati terbaik dengan kompetensi unggul. Para lulusan telah membuktikan dirinya dengan menjadi pemimpin dan menorehkan prestasi - baik di bidang bisnis maupun dalam akademik - di perusahaan-perusahaan nasional dan multinasional, badan-badan pemerintah, usaha kecil dan menengah milik pribadi, di berbagai perguruan tinggi di dalam dan luar negeri.</p>
+        <!--Mini 2-->
+        <div style="background-color: steelblue;">
+            <p style="color: aliceblue;font-size: 22px;">START <b>YOUR</b> FUTURE TODAY</p>
+            <p style="color: aliceblue;font-size: 14px;"> Apapun tujuan akhirmu: Profesional, Entrepreneur, maupun Akademisi, mari berjalan dan berproses bersama kami menuju masa depan gemilang!</p>
+        </div>
+        <!--Mini 3-->
+        <div style="background-color: black;">
+            <ul>
+                <a href="http://www.lasesp.com/article/16306366859153242/Ma_Chung" alt="Not Found" target="_blank" style="text-align: center;"><img src="https://machung.ac.id/wp-content/themes/brew-master/images/machung-logo-white-low.png" class="center;"></a>
+                <li><a href="https://e-learning.machung.ac.id" class="warna" target="_blank">Ma Chung Learning Management System (LMS)</a></li>
+                <li><a href="http://eprints.machung.ac.id/" class="warna" target="_blank">Repository Dokumen</a></li>
+                <li><a href="http://lib.machung.ac.id" class="warna" target="_blank">Library</a></li>
+                <li><a href="http://mrcpp.machung.ac.id" class="warna" target="_blank">PUI MRCPP</a></li>
+                <li><a href="http://malangdigitalcore.co" class="warna" target="_blank">Malang Digital Core</a></li>
+                <li><a href="http://jurnal.machung.ac.id" class="warna" target="_blank">Jurnal Online</a></li>
+                <li><a href="https://machung.ac.id/lowongan-kerja/" class="warna" target="_blank">Karir</a></li>
+                <li><a href="https://machung.ac.id/mahasiswa-baru/" class="warna" target="_blank">Calon Mahasiswa Baru</a></li></ul>
+        </div>
+        <!--Mini 4-->
+        <div style="background-color: steelblue;">
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+            <a href=""><img src=""></a>
+        </div>
+        <!--Mini 5-->
+        <div>
+            <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
+        </div>
+    </body>
+</html>
