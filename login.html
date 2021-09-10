@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+           body{
+            background-color: antiquewhite;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .listnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+          
+        .isilist{
+            float: left;
+          }
+          
+        .isilist a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+        .isilist a:hover {
+            background-color: #111;
+          }
+        
+        .tbbundar{
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: grey;
+            color: white;
+        }
+        .bulat{border-radius: 130px;background-color: orangered;padding: 5px;text-decoration: none;border: 0px;width: 200px;color: white;}
+        </style><!--<link rel="style" href="style/tukel.css">-->
+    </head>
+    <body>
+        <div style="height: 45%;">
+            <ul class="listnav">
+                <li class="isilist"><a class="active" href="/home.html">Home</a></li>
+                <li class="isilist"><a href="#produk">Product</a></li>
+                <li class="isilist"><a href="#abot">About</a></li>
+                <li class="isilist" style="float:right"><a href="/login.html">Login</a></li>
+              </ul>
+        </div>
+        <div align="center" style="height: 20%;">
+            <form action="#">
+                <table class="tbbundar" style="padding: 10px;">
+                    <tr style="padding: 10px;">
+                        <td><label for="uname">Username</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="text" name="uname" id="uname" size="25"></td>
+                    </tr><tr style="padding: 10px;">
+                        <td><label for="pwd">Password</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="password" name="pwd" id="pwd" size="25"></td>
+                    </tr>
+                    <tr style="padding: 10px;">
+                        <td colspan=2><input type="submit" class="bulat"><td align="left"><a href="/register.html" style="text-decoration: none;"><button class="bulat">Register</button></a></td></td>
+                    </tr>
+                </table>
+            </form>
+        </div><div style="height: 25%;"></div>
+        <div style="height: 10%;">
+            <br><br><p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
+        </div>
+    </body>
+</html>
