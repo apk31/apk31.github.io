@@ -1,44 +1,3 @@
-<!--<html>
-    <head>
-        <style>
-           body{
-            background-color: antiquewhite;
-            margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        .listnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-          }
-          
-        .isilist{
-            float: left;
-          }
-          
-        .isilist a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-          }
-          
-        .isilist a:hover {
-            background-color: #111;
-          }
-        
-        .tbbundar{
-            border: 1px solid black;
-            border-radius: 10px;
-            background-color: grey;
-            color: white;
-        }
-        .bulat{border-radius: 130px;background-color: orangered;padding: 5px;text-decoration: none;border: 0px;width: 200px;color: white;}
-        </style><link rel="style" href="style/tukel.css">
-    </head>-->
     <html>
         <head>
           <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -161,38 +120,95 @@
                 border-radius: 15px 15px 0 0;
               }
               
+
+              div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}  
+
               </style>
               
             <!--<link rel="style" href="style/tukel.css">-->
         </head>
-    <body><div style="padding: 20px;">
+    <body>
+        <div style="padding: 20px;">
             <ul class="listnav" style="padding: 20px;">
               <a href="home.html"><img src="pic\logo-min.png" alt="" width="60px" align=left style="padding-left: 30px;"></a>
               <li class="isilist" style="padding-left: 50px;"><a href="/home.html">Home</a></li>
               <li class="isilist"><div class="dropdown"><a class="dropbtn" href="#produk">Product</a><div class="dr-content"><a href="#">Produk 1</a><a href="#">Produk 2</a><a href="#">Produk 3</a><a href="#">Produk 4</a><a href="#">Produk 5</a></div></div></li>
               <li class="isilist"><a href="#abot">About</a></li>
+              <li class="isilist" style="padding-left: 20px;"><a href="/Customer Option.html">My Cart & Details</a></li>
               <li class="isi2"><a class="bunder" href="/login.html">Login</a></li>
               </ul></div>
               <div class="card" style="margin: auto;background-color: rgb(248, 248, 248);">
-        <div align="center" style="height: 20%;">
-                <table class="tbbundar" style="padding: 10px;">
-                <form action="#">
-                    <tr style="padding: 10px;">
-                        <td><label for="uname">Username / Email</label></td>
-                        <td style="width: fit-content;">:</td>
-                        <td><input type="text" name="uname" id="uname" size="25" required="required"></td>
-                    </tr><tr style="padding: 10px;">
-                        <td><label for="pwd">Password</label></td>
-                        <td style="width: fit-content;">:</td>
-                        <td><input type="password" name="pwd" id="pwd" size="25" required="required"></td>
-                    </tr>
-                    <tr style="padding: 10px;" align="right">
-                        <td colspan=3><input type="submit" class="bunder"></td>
-                    </tr>
-                </form>
-                        <td colspan=3>Belum punya akun? <a href="/register.html">Daftar disini</a> </td>
-                </table>
-        </div></div>
+        
+<h1 class="text-center" th:text="#{guestbook.title}">GUESTBOOK</h1>
+      
+    <div class="text-center">
+      <a sec:authorize="isAnonymous()" href="/login">Login</a>
+      <a sec:authorize="isAuthenticated()" href="/logout">Logout</a>
+    </div>
+    
+    <br/>
+
+    <div id="entries" class="mx-auto">      
+      <div th:each="entry, it : ${entries}" th:with="index = ${it.count}">
+        <div class="card" th:fragment="entry" th:id="entry+${entry.id}">
+          <div class="card-header">
+            <form sec:authorize="hasRole('ADMIN')" th:method="delete" th:action="@{/guestbook/{id}(id=${entry.id})}" th:attr="data-entry-id=${entry.id}">
+            	<h4>Click to Refresh</h4>
+              <button th:title="#{guestbook.form.delete}" class="btn btn-sm float-right">
+                <span class="fas fa-times"></span>
+              </button>
+            
+
+            </form>
+            <h4 th:text="${index} + '. ' + ${entry.name}" class="card-title">This is Guest Book</h4>
+          </div>
+          <div class="card-body">
+            <blockquote class="entrytext" th:text="${entry.text}"></blockquote>
+          </div>
+          <div class="card-footer">
+            <footer class="date" th:text="${#temporals.format(entry.date, 'dd. MMMM yyyy - HH:mm')}">The Date and time will saved</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <form method="post" role="form" class="gb-form" id="form" th:action="@{/guestbook}" th:object="${form}">
+      <div class="form-group">
+        <label for="name" th:text="#{guestbook.form.name}">Name</label><br /> 
+        <input class="form-control" type="text" th:field="*{name}" th:errorclass="is-invalid" required="required" />
+        <div th:if="${#fields.hasErrors('name')}" class="invalid-feedback" th:text="#{guestbook.form.name.required}">Please provide a name.</div> 
+      </div>
+      <div class="form-group">
+        <label for="text" th:text="#{guestbook.form.text}">Text</label><br /> 
+        <textarea th:field="*{text}" th:errorclass="is-invalid" class="form-control" required="required"></textarea>
+        <div th:if="${#fields.hasErrors('text')}" class="invalid-feedback" th:text="#{guestbook.form.text.required}">Please provide a text.</div>
+      </div>
+      <input type="submit" class="btn btn-secondary" th:value="#{guestbook.form.submit}" value="Senden" />
+    </form>
+  
+              
+        </div>
+
         <div>
             <br><br><p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
         </div>
