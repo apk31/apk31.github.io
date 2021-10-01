@@ -1,0 +1,145 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <table class="tbbundar" style="padding: 10px;">
+                <form id="sender">
+                    <tr style="padding: 10px;">
+                        <td><label for="uname">Naleng</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="text" name="uname" id="uname" size="25"></td>
+                    </tr><tr style="padding: 10px;">
+                        <td><label for="mail">MaiL</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="email" name="mail" id="mail" size="25"></td></tr>
+                    <tr style="padding: 10px;">
+                        <td><label for="pwd">Password</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="password" name="pwd" id="pwd" size="25"></td>
+                    </tr>
+                    <tr style="padding: 10px;">
+                        <td><label for="sex">Sex</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="radio" name="sex" id="male" value="Male" size="25">Male</td>
+                        <td><input type="radio" name="sex" id="female" value="Female" size="25">Female</td>
+                    </tr>
+                    <tr style="padding: 10px;">
+                        <td><label for="hob">Hobi</label></td>
+                        <td style="width: fit-content;">:</td>
+                        <td><input type="checkbox" name="hob" id="hob" value="Gaming" size="25">Gaming</td>
+                        <td><input type="checkbox" name="hob1" id="hob1" value="Tidur" size="25">Tidur</td>
+                        <td><input type="checkbox" name="hob2" id="hob2" value="Membaca" size="25">Membaca</td>
+                        <td><input type="checkbox" name="hob3" id="hob3" value="Menonton" size="25">Menonton</td>
+                    </tr>
+                    <tr style="padding: 10px;" align="right">
+                        <td colspan=3><input type="submit" value="submit"></td>
+                    </tr>
+                </form>
+                </table>
+                <button onclick=getset()>test</button>
+        </div>
+        <div>
+            <p id="collector">here some test print</p>
+        </div>
+        <br>
+        <br>
+        <!--<div>Captcha</div>
+        <div>
+            <p id="a1"></p>
+            <input type="text" name="test" id="jwb">
+            <button onclick=hasil()>Cek</button>
+            <br>
+            <p id="cek">Test run</p>
+        </div>
+        <br>
+        <br>-->
+        <div>Captcha gbr</div>
+        <div>
+            <img id="a1" width=5%><img id="op" width=5%><img id="a2" width=5%>
+            <br><input type="text" name="test" id="jwb">
+            <button onclick=hasilg()>Cek</button>
+            <br>
+            <p id="cek">Test run</p>
+        </div>
+        <script>
+            function getset(){
+                var nl=document.getElementById("uname").value + "<br\>";
+                var mail=document.getElementById("mail").value + "<br\>";
+                var pwd=document.getElementById("pwd").value + "<br\>";
+                if (document.getElementById("male").checked) {
+                    var sex=document.getElementById("male").value + "<br\>";
+                }else if(document.getElementById("female").checked){
+                    var sex=document.getElementById("female").value + "<br\>";
+                }else{}
+                if (document.getElementById("hob").checked) {
+                    var hob = document.getElementById("hob").value + "<br\>";
+                } else if (document.getElementById("hob1").checked) {
+                    var hob = document.getElementById("hob1").value + "<br\>";
+                } else if (document.getElementById("hob2").checked) {
+                    var hob = document.getElementById("hob2").value + "<br\>";
+                } else if (document.getElementById("hob3").checked) {
+                    var hob = document.getElementById("hob3").value + "<br\>";
+                }else{}
+                document.getElementById("collector").innerHTML= nl+mail+pwd+sex+hob;
+            }
+            /*const op=["+","-","x",":"];
+            const a=["1","2","3","4","5","6","7","8","9","0"];
+            var op1=op[Math.floor(Math.random()*3)];
+            if (op1==op[3]) {
+                var a1= a[Math.floor(Math.random()*9)];
+                var a2= a[Math.floor(Math.random()*8)];
+            } else {
+                var a1= a[Math.floor(Math.random()*9)];
+                var a2= a[Math.floor(Math.random()*8)];
+            }
+            var soal = a1+" "+op1+" "+a2
+            if (op1==op[0]) {
+                var res= a1+a2;
+            } else if (op1==op[1]) {
+                var res= a1-a2;
+            } else if (op1==op[2]) {
+                var res= a1*a2;
+            } else if (op1==op[3]) {
+                var res= a1/a2;
+            }else{}
+            document.getElementById("a1").innerHTML=soal;
+            function hasil(){
+                if (document.getElementById("jwb").value==res) {
+                    document.getElementById("cek").innerHTML="VALID";
+                } else {
+                    document.getElementById("cek").innerHTML="INVALID";
+                }
+            } */
+
+            const op=["pic/plus.png","pic/minus.png","pic/kali.png","pic/bagi.png"];
+            const a=[1,2,3,4,5,6,7,8,9,0];
+            var op1=op[Math.floor(Math.random()*4)];
+            if (op1==op[4]) {
+                var a1= a[Math.floor(Math.random()*10)];
+                var a2= a[Math.floor(Math.random()*9)];
+            } else {
+                var a1= a[Math.floor(Math.random()*10)];
+                var a2= a[Math.floor(Math.random()*10)];
+            }
+            var c1=document.getElementById("a1").src="pic/"+a1+".png";
+            var c2=document.getElementById("op").src=op1;
+            var c3=document.getElementById("a2").src="pic/"+a2+".png";
+            if (op1==op[0]) {
+                var res= a1+a2;
+            } else if (op1==op[1]) {
+                var res= a1-a2;
+            } else if (op1==op[2]) {
+                var res= a1*a2;
+            } else if (op1==op[3]) {
+                var res= Math.floor(a1/a2);
+            }else{}
+            function hasilg(){
+                if (document.getElementById("jwb").value==res) {
+                    document.getElementById("cek").innerHTML="VALID";
+                } else {
+                    document.getElementById("cek").innerHTML="INVALID";
+                }
+            } 
+        </script>
+    </body>
+</html>

@@ -112,7 +112,7 @@ div.a
 
 </style>
 </head>
-<body style="background-color:  #fff7bd;">
+<body style="background-color:  #fff7bd;" onload=animasi()>
 
 <div class="header">
   <p>Website Apel Kegigit</p>
@@ -132,6 +132,7 @@ Untuk tau lebih lanjut mengenai kami silahkan klik gambar-gambar yang ada di baw
 </div>
 
 <table class="center">
+  <center><img src=1.jpg width=400px height=300px id=gb></center>
   <tr>
     <td>
       <div class="box">
@@ -182,6 +183,25 @@ Untuk tau lebih lanjut mengenai kami silahkan klik gambar-gambar yang ada di baw
     Apel_Kegigit_Indo
   </p>
 </footer>
+
+<script>
+x=1
+
+function start()
+{
+  x++
+  if(x==5)
+  {
+    x=1
+  }
+  document.getElementById("gb").src=x+".jpg"
+}
+
+function animasi()
+{
+  t=setInterval("start()", 2000)
+}
+</script>
 
 </body>
 </html>
