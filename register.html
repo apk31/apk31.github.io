@@ -315,17 +315,17 @@
       var pwdc=document.getElementById("pwdc").value;
       var text="Apakah data Anda sudah benar ? Username: "+uname+"  Email: "+mail+"  Password: "+pwd; 
       if (document.getElementById("uname").value=="" || document.getElementById("mail").value=="" || document.getElementById("pwd").value=="" || document.getElementById("pwdc").value=="" ) {
-        alert("Please don't leave input empty")
+        alert("Please don't leave input empty");
       }else{
         if (pwd==pwdc) {
         r=confirm(text);
         if (r==true){
-          document.getElementById("form").action="/registered.html"
+          document.getElementById("form").action="/registered.html";
         }else{
-          document.getElementById("form").action="/register.html"
+          document.getElementById("form").action="/register.html";
         }
       }else{
-        alert("Password don't match each other. Try again")
+        alert("Password don't match each other. Try again");
       }
       }
     }
