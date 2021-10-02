@@ -274,7 +274,7 @@
   <div class="card" style="margin: auto;background-color: rgb(248, 248, 248);">
     <div align="center" style="height: 30%;">
       <table class="tbbundar" style="padding: 10px;">
-        <form action="registered.html">
+        <form id="form" action="#">
           <tr style="padding: 10px;">
             <td><label for="mail">Email</label></td>
             <td style="width: fit-content;">:</td>
@@ -296,7 +296,7 @@
             <td><input type="password" name="pwdc" id="pwdc" size="25" required="required"></td>
           </tr>
           <tr style="padding: 10px;" align="right">
-            <td colspan=3><button type="submit" class="bunder">Daftar</button></td>
+            <td colspan=3><button onclick=getset() type="submit" class="bunder">Daftar</button></td>
             </td>
           </tr>
         </form>
@@ -306,6 +306,30 @@
       </table>
     </div>
   </div>
+  <script>
+    function getset(){
+      var r="";
+      var uname=document.getElementById("uname").value;
+      var mail=document.getElementById("mail").value;
+      var pwd=document.getElementById("pwd").value;
+      var pwdc=document.getElementById("pwdc").value;
+      var text="Apakah data Anda sudah benar ? Username: "+uname+"  Email: "+mail+"  Password: "+pwd; 
+      if (document.getElementById("uname").value=="" || document.getElementById("mail").value=="" || document.getElementById("pwd").value=="" || document.getElementById("pwdc").value=="" ) {
+        alert("Please don't leave input empty")
+      }else{
+        if (pwd==pwdc) {
+        r=confirm(text);
+        if (r==true){
+          document.getElementById("form").action="/registered.html"
+        }else{
+          document.getElementById("form").action="/register.html"
+        }
+      }else{
+        alert("Password don't match each other. Try again")
+      }
+      }
+    }
+  </script>
   <div>
     <br><br>
     <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
