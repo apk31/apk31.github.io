@@ -1,9 +1,9 @@
 <html>
 
 <head>
-    <title>MyShop VIU</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="pic/favicon-32x32.png">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>MyShop</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="pic/favicon-32x32.png">
     <style>
         body {
             background-color: white;
@@ -14,7 +14,8 @@
         td {
             text-align: center;
             padding: 5px;
-            width: 25%;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
         }
 
         .listnav {
@@ -86,47 +87,13 @@
             transition-duration: 0.3s;
         }
 
-        .bunder2 {
-            border-radius: 30px;
-            background-color: rgb(134, 238, 120);
-            padding: 15px;
-            text-decoration: none;
-            border: 0px;
-            width: 100px;
-            color: black;
-            font-size: 14px;
-        }
-
-        .bunder2:hover {
-            background-color: rgb(77, 197, 83);
-
-            transition-duration: 0.3s;
-        }
-
-        .bunder3 {
-            border-radius: 30px;
-            background-color: rgb(253, 219, 107);
-            padding: 15px;
-            text-decoration: none;
-            border: 0px;
-            width: 100px;
-            color: black;
-            font-size: 14px;
-        }
-
-        .bunder3:hover {
-            background-color: rgb(221, 195, 81);
-
-            transition-duration: 0.3s;
-        }
-
         .pad {
             padding: 30px;
         }
 
         .col {
             column-count: 2;
-            height: auto;
+            height: 300px;
         }
 
         @keyframes fade {
@@ -246,41 +213,7 @@
             text-decoration: none;
             color: black;
         }
-
-        .listnav label,
-        .listnav input {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .listnav input[type="radio"] {
-            opacity: 0.011;
-        }
-
-        .listnav label {
-            border-radius: 8px;
-            background-color: lightgray;
-            padding: 10px;
-            text-decoration: none;
-            border: 0px;
-            color: black;
-        }
-
-        .listnav label:hover {
-            background-color: gray;
-            color: honeydew;
-            transition-duration: 0.3s;
-        }
-
-        .listnav input[type="radio"]:checked+label {
-            background-color: rgb(110, 110, 110);
-            color: honeydew;
-            transition-duration: 0.3s;
-        }
+        
     </style>
     <!--<link rel="style" href="style/tukel.css">-->
 </head>
@@ -304,49 +237,74 @@
             <li class="isi2"><a class="bunder btn1" href="/login.html">Login</a></li>
         </ul>
     </div>
-    <div class="col" style="padding-left: 50px;padding-right: 50px;">
-        <div><img src="pic/viu.jpeg" width="100%"></div>
-        <div style="margin-top: 200px;">
-            <h1>VIU</h1>
-            <h4>Deskripsi :</h4>
-            <p>Stream your favorite TV shows and movies without commercials with VIU! You can watch it on any device and
-                watch
-                your favorite TV shows and movies without internet.</p>
-            <h4>Kategori :</h4>
-            <ul class="listnav" style="height: auto;">
-                <li class="isilist"
-                    style="text-align: center;width: 80px;height: 40px;position:relative;padding: 0;margin-right: 15px;">
-                    <input type="radio" name="kat" id="share"><label for="share">Sharing</label></li>
-                <li class="isilist"
-                    style="text-align: center;width: 80px;height: 40px;position:relative;padding: 0;margin-right: 15px;">
-                    <input type="radio" name="kat" id="priv"><label for="priv">Private</label></li>
-            </ul>
-            </p><br><br>
-            <h4>Durasi :</h4>
-            <p>
-            <ul class="listnav" style="height: auto;">
-                <li class="isilist"
-                    style="text-align: center;width: 100px;height: 40px;position:relative;padding: 0;margin-right: 15px;">
-                    <input type="radio" name="dur" id="1m"><label for="1m">1 Bulan</label></li>
-                <li class="isilist"
-                    style="text-align: center;width: 100px;height: 40px;position:relative;padding: 0;margin-right: 15px;">
-                    <input type="radio" name="dur" id="2m"><label for="2m">2 Bulan</label></li>
-                <li class="isilist"
-                    style="text-align: center;width: 100px;height: 40px;position:relative;padding: 0;margin-right: 15px;">
-                    <input type="radio" name="dur" id="3m"><label for="3m">3 Bulan</label></li>
-            </ul>
-            </p>
-            <br><br><br>
-            <p style="margin-top: 70px;"><a class="bunder2"
-                    href="https://api.whatsapp.com/send/?phone=%2B6282331558378&text=Berikut+bukti+pembayaran+untuk+order+Netflix%2C+Terima+kasih.">Beli
-                    Sekarang</a><a style="margin-left: 15px;" class="bunder3" href="cart.html">Masukkan ke Keranjang</a>
-            </p>
-        </div>
+    <h1 align=center>Review Pelanggan Kami</h1>
+    <div style="padding: 150px;padding-top: 0;padding-bottom: 0;">
+        <table style="border-collapse: collapse;width: 100%;">
+            <!--Bakal saya pake lagi bos! -Sonarhely
+            Harganya serba murah dan terjangkau! -Gtdb
+            Biasanya saya pake Viu aja, tapi setelah pake website ini, saya pake yang lain juga. -IbuDangdut
+            Udah resmi, harga murah, supportnya bagus juga. -SenengNonton
+            Websitenya bagus, keren dan mudah diakses. -WebsiteIdaman-->
+            <tr>
+                <td style="border-bottom: 0;width: 15%;"><img src="pic/user.png" width="60px"></td>
+                <td style="border-bottom: 0;width: 85%;text-align: left;font-size: 18px;" rowspan="2" style="text-align: left;">Bakal saya pake lagi bos!</td>
+            </tr>
+            <tr>
+                <td style="border: 0;width: 15%;"><img src="pic/rating.png" width="75px"></td>
+            </tr>
+            <tr>
+                <td style="border-top: 0;width: 15%;"><b>Sonarhely</b> </td>
+                <td style="text-align: right;border-top: 0;width: 85%;"><img class="fot" src="pic/comment.png" width="25px" style="margin-right: 10px;"><img class="fot" src="pic/like.png" width="25px"></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 0;width: 15%;"><img src="pic/user.png" width="60px"></td>
+                <td style="border-bottom: 0;width: 85%;text-align: left;font-size: 18px;" rowspan="2" style="text-align: left;">Harganya serba murah dan terjangkau!</td>
+            </tr>
+            <tr>
+                <td style="border: 0;width: 15%;"><img src="pic/rating.png" width="75px"></td>
+            </tr>
+            <tr>
+                <td style="border-top: 0;width: 15%;"><b>Gtdb</b> </td>
+                <td style="text-align: right;border-top: 0;width: 85%;"><img class="fot" src="pic/comment.png" width="25px" style="margin-right: 10px;"><img class="fot" src="pic/like.png" width="25px"></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 0;width: 15%;"><img src="pic/user.png" width="60px"></td>
+                <td style="border-bottom: 0;width: 85%;text-align: left;font-size: 18px;" rowspan="2" style="text-align: left;">Biasanya saya pake Viu aja, tapi setelah pake website ini, saya pake yang lain juga.</td>
+            </tr>
+            <tr>
+                <td style="border: 0;width: 15%;"><img src="pic/rating.png" width="75px"></td>
+            </tr>
+            <tr>
+                <td style="border-top: 0;width: 15%;"><b>IbuDangdut</b> </td>
+                <td style="text-align: right;border-top: 0;width: 85%;"><img class="fot" src="pic/comment.png" width="25px" style="margin-right: 10px;"><img class="fot" src="pic/like.png" width="25px"></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 0;width: 15%;"><img src="pic/user.png" width="60px"></td>
+                <td style="border-bottom: 0;width: 85%;text-align: left;font-size: 18px;" rowspan="2" style="text-align: left;">Udah resmi, harga murah, supportnya bagus juga.</td>
+            </tr>
+            <tr>
+                <td style="border: 0;width: 15%;"><img src="pic/rating.png" width="75px"></td>
+            </tr>
+            <tr>
+                <td style="border-top: 0;width: 15%;"><b>SenengNonton</b> </td>
+                <td style="text-align: right;border-top: 0;width: 85%;"><img class="fot" src="pic/comment.png" width="25px" style="margin-right: 10px;"><img class="fot" src="pic/like.png" width="25px"></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 0;width: 15%;"><img src="pic/user.png" width="60px"></td>
+                <td style="border-bottom: 0;width: 85%;text-align: left;font-size: 18px;" rowspan="2" style="text-align: left;">Websitenya bagus, keren dan mudah diakses.</td>
+            </tr>
+            <tr>
+                <td style="border: 0;width: 15%;"><img src="pic/rating.png" width="75px"></td>
+            </tr>
+            <tr>
+                <td style="border-top: 0;width: 15%;"><b>WebsiteIdaman</b> </td>
+                <td style="text-align: right;border-top: 0;width: 85%;"><img class="fot" src="pic/comment.png" width="25px" style="margin-right: 10px;"><img class="fot" src="pic/like.png" width="25px"></td>
+            </tr>
+        </table>
     </div>
     <div>
         <footer>
-            <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
+          <p style="text-align: center;">&copy Copyright 2021 by Penguin Berjalan</p>
         </footer>
-    </div>
-
+      </div>
 </body>
